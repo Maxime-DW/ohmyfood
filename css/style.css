@@ -1,0 +1,567 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  min-width: 250px;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+body a {
+  text-decoration: none;
+  color: unset;
+}
+body h1, body section h2, body h3 {
+  color: #FDCB46;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+body section h2, body h3 {
+  font-weight: normal;
+}
+body header, body .btn, body footer {
+  background-color: #579C87;
+}
+body header {
+  text-align: center;
+  width: 100%;
+}
+body header h1 {
+  margin-top: 0;
+  margin-bottom: 5vh;
+  padding: 1rem;
+}
+body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__bloc {
+  width: 70%;
+  max-width: 300px;
+  height: 50vh;
+  box-shadow: 0 0 0.5rem #AFAFAF;
+  margin: 0rem 1rem 3rem 1rem;
+}
+.menu__bloc--note {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  padding: 2rem;
+  background-color: #FCDFDB;
+  font-family: "Devonshire", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.menu__bloc--note p, .menu__bloc--note h4 {
+  margin: 1vh;
+  color: #000;
+}
+.menu__bloc--note h4 {
+  text-transform: uppercase;
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+.menu__bloc--note .fa-music {
+  position: relative;
+  top: 2rem;
+  font-size: 2rem;
+  background: linear-gradient(270deg, rgba(241, 88, 97, 0.2836484936) 36%, red 79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__bloc--chic {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  padding: 2rem;
+  background-color: #FFF5FE;
+  font-family: "Croissant One", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.menu__bloc--chic h4 {
+  margin: 1vh;
+}
+.menu__bloc--chic p {
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #c77412 0%, #905bfd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__bloc--chic h4 {
+  font-family: "Noto Serif", Arial, Helvetica, sans-serif;
+  color: #c77412;
+}
+.menu__bloc--delice {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  padding: 2rem;
+  background-color: #F9F9F9;
+  font-family: "Dancing Script", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.menu__bloc--delice p, .menu__bloc--delice h4 {
+  margin: 1vh;
+}
+.menu__bloc--delice p {
+  background: linear-gradient(90deg, #0645e5 0%, #1b91fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__bloc--delice h4 {
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  color: #1b91fa;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.menu__bloc--palette {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  padding: 2rem;
+  background-color: #FDFFFD;
+  font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.menu__bloc--palette p, .menu__bloc--palette h4 {
+  margin: 1vh;
+}
+.menu__bloc--palette p {
+  background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__bloc--palette h4 {
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  color: #4c9f42;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 5.5rem;
+  text-align: center;
+  width: 60%;
+  min-width: 250px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn h2 {
+  margin-top: 0;
+  padding: 0.5rem;
+}
+.btn span {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: #FDCB46;
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+.carte {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+.carte__bloc {
+  width: 100%;
+  padding: 0.5rem;
+}
+.carte h1 {
+  font-size: 1.5rem;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.carte h2 {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+.carte h3 {
+  margin: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.carte h4 {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.carte section {
+  margin-bottom: 2rem;
+}
+.carte section p {
+  margin: 0.5rem 0.5rem;
+}
+.carte .formule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carte .formule h4 {
+  text-align: center;
+}
+.carte .formule .before, .carte .formule .after {
+  width: 30%;
+  height: 50px;
+}
+.carte .formule .after {
+  transform: rotateY(180deg);
+}
+
+.carte__bloc--note {
+  background-color: #FCDFDB;
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  color: #000;
+}
+.carte__bloc--note h2 {
+  font-size: 2.5rem;
+}
+.carte__bloc--note h4 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+.carte__bloc--note p {
+  font-size: 1.2rem;
+}
+.carte__bloc--note .fa-music {
+  background: linear-gradient(270deg, rgba(241, 88, 97, 0.2836484936) 36%, red 79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.carte__bloc--note section p {
+  padding-left: 0;
+}
+.carte__bloc--note section p strong {
+  padding-right: 0;
+}
+.carte__bloc--note h2, .carte__bloc--note h3 {
+  font-family: "Devonshire", Arial, Helvetica, sans-serif;
+}
+.carte__bloc--note h2 {
+  font-size: 2.5rem;
+}
+.carte__bloc--note h2 .fa-music {
+  font-size: 3.5rem;
+}
+.carte__bloc--note h3 {
+  color: #000;
+}
+.carte__bloc--note h3 .fa-music {
+  font-size: 2rem;
+  position: relative;
+  right: 1rem;
+}
+.carte__bloc--note .before, .carte__bloc--note .after {
+  clip-path: polygon(46% 45%, 89% 49%, 100% 47%, 100% 53%, 64% 52%, 36% 51%, 10% 55%, 0 53%, 0 47%, 11% 49%);
+  background-color: #000;
+}
+.carte__bloc--note h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carte__bloc--chic {
+  background-color: #FFF5FE;
+  font-family: "Noto Serif", Arial, Helvetica, sans-serif;
+}
+.carte__bloc--chic h4 {
+  font-size: 1.1rem;
+}
+.carte__bloc--chic p {
+  font-size: 0.9rem;
+}
+.carte__bloc--chic h2 {
+  background: linear-gradient(90deg, #c77412 0%, #905bfd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Croissant One", Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+}
+.carte__bloc--chic .before, .carte__bloc--chic .after {
+  clip-path: polygon(0 49%, 84% 40%, 100% 50%, 84% 60%);
+}
+.carte__bloc--chic .entree {
+  color: #c77412;
+}
+.carte__bloc--chic .entree .before, .carte__bloc--chic .entree .after {
+  background: #c77412;
+}
+.carte__bloc--chic .plat {
+  color: #A56799;
+}
+.carte__bloc--chic .plat .before, .carte__bloc--chic .plat .after {
+  background: #A56799;
+}
+.carte__bloc--chic .dessert {
+  color: #905bfd;
+}
+.carte__bloc--chic .dessert .before, .carte__bloc--chic .dessert .after {
+  background: #905bfd;
+}
+
+.carte__bloc--delice {
+  background-color: #F9F9F9;
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  color: #000;
+}
+.carte__bloc--delice h2 {
+  font-size: 2.5rem;
+}
+.carte__bloc--delice h4 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+.carte__bloc--delice p {
+  font-size: 1.2rem;
+}
+.carte__bloc--delice h2 {
+  background: linear-gradient(90deg, #0645e5 0%, #1b91fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Dancing Script", Arial, Helvetica, sans-serif;
+}
+.carte__bloc--delice .before, .carte__bloc--delice .after {
+  clip-path: polygon(8% 50%, 59% 50%, 96% 50%, 100% 55%, 5% 55%, 0 40%, 6% 49%);
+}
+.carte__bloc--delice .entree .before, .carte__bloc--delice .entree .after {
+  background: #0228DD;
+}
+.carte__bloc--delice .plat .before, .carte__bloc--delice .plat .after {
+  background: #0670F3;
+}
+.carte__bloc--delice .dessert .before, .carte__bloc--delice .dessert .after {
+  background: #229DF9;
+}
+
+.carte__bloc--palette {
+  background-color: #FDFFFD;
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  color: #000;
+}
+.carte__bloc--palette h2 {
+  font-size: 2.5rem;
+}
+.carte__bloc--palette h4 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+.carte__bloc--palette p {
+  font-size: 1.2rem;
+}
+.carte__bloc--palette h2 {
+  background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+}
+.carte__bloc--palette .before, .carte__bloc--palette .after {
+  clip-path: polygon(48% 44%, 75% 50%, 100% 48%, 100% 52%, 80% 55%, 49% 52%, 24% 58%, 0 55%, 0 45%, 21% 50%);
+  background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
+}
+
+.menu__bloc p, .menu__bloc h4, .menu__bloc .fa-music {
+  transition: all 200ms ease-in-out;
+}
+.menu__bloc:hover p, .menu__bloc:hover h4, .menu__bloc:hover .fa-music {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+
+@keyframes loader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.btn:hover span {
+  animation: loader 500ms infinite;
+}
+.btn:hover span:nth-of-type(2) {
+  animation-delay: 150ms;
+}
+.btn:hover span:nth-of-type(3) {
+  animation-delay: 300ms;
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(2%);
+  }
+  75% {
+    transform: translateX(-2%);
+  }
+}
+footer h3:hover {
+  animation: shake 150ms 2;
+}
+
+.carte__bloc--note a {
+  background: linear-gradient(to top, #000 0%, #000 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 250ms ease-in-out;
+}
+.carte__bloc--note a:hover {
+  background-size: 100% 100%;
+}
+
+.carte__bloc--chic a {
+  padding-bottom: 0.2rem;
+  transition: background-size 250ms ease-in-out;
+}
+.carte__bloc--chic .appetit {
+  background: linear-gradient(to top, #c77412 0%, #c77412 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--chic .appetit:hover {
+  background-size: 100% 100%;
+}
+.carte__bloc--chic .papilles {
+  background: linear-gradient(to top, #A56799 0%, #A56799 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--chic .papilles:hover {
+  background-size: 100% 100%;
+}
+.carte__bloc--chic .gourmandises {
+  background: linear-gradient(to top, #905bfd 0%, #905bfd 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--chic .gourmandises:hover {
+  background-size: 100% 100%;
+}
+
+.carte__bloc--delice a {
+  padding-bottom: 0.2rem;
+  transition: background-size 250ms ease-in-out;
+}
+.carte__bloc--delice .commencer {
+  background: linear-gradient(to top, #0228DD 0%, #0228DD 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--delice .commencer:hover {
+  background-size: 100% 100%;
+}
+.carte__bloc--delice .continuer {
+  background: linear-gradient(to top, #0670F3 0%, #0670F3 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--delice .continuer:hover {
+  background-size: 100% 100%;
+}
+.carte__bloc--delice .terminer {
+  background: linear-gradient(to top, #229DF9 0%, #229DF9 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--delice .terminer:hover {
+  background-size: 100% 100%;
+}
+
+.carte__bloc--palette a {
+  padding-bottom: 0.2rem;
+  background: linear-gradient(to top, #4c9f42 0%, #4c9f42 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 250ms ease-in-out;
+}
+.carte__bloc--palette a:hover {
+  background-size: 100% 100%;
+}
+
+@media all and (min-width: 576px) {
+  section div {
+    display: flex;
+    justify-content: space-between;
+  }
+  section p {
+    padding-left: 3rem;
+  }
+  section p strong {
+    padding-right: 3rem;
+  }
+
+  .carte__bloc--delice h2, .carte__bloc--palette h2 {
+    font-size: 3.5rem;
+  }
+  .carte__bloc--chic h2 {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 768px) {
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .menu__bloc {
+    width: 35%;
+  }
+  .menu__bloc--note, .menu__bloc--chic, .menu__bloc--delice, .menu__bloc--palette {
+    width: 100%;
+  }
+
+  .carte__bloc {
+    width: 80%;
+    max-width: 740px;
+    box-shadow: 0 0 0.5rem #AFAFAF;
+    padding: 0;
+  }
+  .carte__bloc--note, .carte__bloc--chic, .carte__bloc--delice, .carte__bloc--palette {
+    padding: 1.5rem;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+@media all and (min-width: 1200px) {
+  body {
+    width: 60%;
+    margin: auto;
+  }
+  body footer {
+    width: 60%;
+  }
+
+  .carte__bloc {
+    width: 90%;
+  }
+  .carte__bloc--note, .carte__bloc--chic, .carte__bloc--delice, .carte__bloc--palette {
+    width: 100%;
+    padding: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
