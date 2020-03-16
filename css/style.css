@@ -42,6 +42,114 @@ body footer {
   padding: 0 1rem;
 }
 
+@keyframes shake {
+  25% {
+    transform: translateX(2%);
+  }
+  75% {
+    transform: translateX(-2%);
+  }
+}
+footer h3:hover {
+  animation: shake 150ms 2;
+}
+
+.carte {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+.carte__bloc {
+  width: 100%;
+  padding: 0.5rem;
+}
+.carte h1 {
+  font-size: 1.5rem;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.carte h2 {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+.carte h3 {
+  margin: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.carte h4 {
+  font-size: 1.3rem;
+}
+.carte section {
+  margin-bottom: 2rem;
+}
+.carte section p {
+  margin: 0.5rem 0.5rem;
+}
+.carte .formule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carte .formule h4 {
+  text-align: center;
+}
+.carte .formule .before, .carte .formule .after {
+  width: 30%;
+  height: 50px;
+}
+.carte .formule .after {
+  transform: rotateY(180deg);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 5.5rem;
+  text-align: center;
+  width: 60%;
+  min-width: 250px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn h2 {
+  margin-top: 0;
+  padding: 0.5rem;
+}
+.btn span {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: #FDCB46;
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+@keyframes loader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.btn:hover span {
+  animation: loader 500ms infinite;
+}
+.btn:hover span:nth-of-type(2) {
+  animation-delay: 150ms;
+}
+.btn:hover span:nth-of-type(3) {
+  animation-delay: 300ms;
+}
+
 .menu {
   width: 100%;
   display: flex;
@@ -50,7 +158,6 @@ body footer {
 }
 .menu__bloc {
   width: 70%;
-  max-width: 300px;
   height: 50vh;
   box-shadow: 0 0 0.5rem #AFAFAF;
   margin: 0rem 1rem 3rem 1rem;
@@ -77,8 +184,6 @@ body footer {
   font-size: 2rem;
 }
 .menu__bloc--note .fa-music {
-  position: relative;
-  top: 2rem;
   font-size: 2rem;
   background: linear-gradient(270deg, rgba(241, 88, 97, 0.2836484936) 36%, red 79%);
   -webkit-background-clip: text;
@@ -162,83 +267,12 @@ body footer {
   font-weight: normal;
 }
 
-.btn {
-  border-radius: 0.5rem;
-  cursor: pointer;
-  margin-top: 0;
-  margin-bottom: 5.5rem;
-  text-align: center;
-  width: 60%;
-  min-width: 250px;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
+.menu__bloc p, .menu__bloc h4, .menu__bloc .fa-music {
+  transition: all 200ms ease-in-out;
 }
-.btn h2 {
-  margin-top: 0;
-  padding: 0.5rem;
-}
-.btn span {
-  width: 0.3rem;
-  height: 0.3rem;
-  border-radius: 50%;
-  background-color: #FDCB46;
-  display: inline-block;
-  margin-left: 0.2rem;
-}
-
-.carte {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 7rem;
-}
-.carte__bloc {
-  width: 100%;
-  padding: 0.5rem;
-}
-.carte h1 {
-  font-size: 1.5rem;
-  color: #000;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-.carte h2 {
-  text-align: center;
-  margin-top: 2.5rem;
-  font-size: 2.5rem;
-  font-weight: normal;
-}
-.carte h3 {
-  margin: 2.5rem;
-  text-align: center;
-  font-size: 2rem;
-}
-.carte h4 {
-  cursor: pointer;
-  font-size: 1.3rem;
-}
-.carte section {
-  margin-bottom: 2rem;
-}
-.carte section p {
-  margin: 0.5rem 0.5rem;
-}
-.carte .formule {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.carte .formule h4 {
-  text-align: center;
-}
-.carte .formule .before, .carte .formule .after {
-  width: 30%;
-  height: 50px;
-}
-.carte .formule .after {
-  transform: rotateY(180deg);
+.menu__bloc:hover p, .menu__bloc:hover h4, .menu__bloc:hover .fa-music {
+  transform: scale(1.2);
+  opacity: 0.6;
 }
 
 .carte__bloc--note {
@@ -293,6 +327,15 @@ body footer {
   font-weight: bold;
 }
 
+.carte__bloc--note a {
+  background: linear-gradient(to top, #000 0%, #000 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 250ms ease-in-out;
+}
+.carte__bloc--note a:hover {
+  background-size: 100% 100%;
+}
+
 .carte__bloc--chic {
   background-color: #FFF5FE;
   font-family: "Noto Serif", Arial, Helvetica, sans-serif;
@@ -333,6 +376,32 @@ body footer {
   background: #905bfd;
 }
 
+.carte__bloc--chic a {
+  padding-bottom: 0.2rem;
+  transition: background-size 250ms ease-in-out;
+}
+.carte__bloc--chic .appetit {
+  background: linear-gradient(to top, #c77412 0%, #c77412 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--chic .appetit:hover {
+  background-size: 100% 100%;
+}
+.carte__bloc--chic .papilles {
+  background: linear-gradient(to top, #A56799 0%, #A56799 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--chic .papilles:hover {
+  background-size: 100% 100%;
+}
+.carte__bloc--chic .gourmandises {
+  background: linear-gradient(to top, #905bfd 0%, #905bfd 7%, transparent 7%) no-repeat;
+  background-size: 0 100%;
+}
+.carte__bloc--chic .gourmandises:hover {
+  background-size: 100% 100%;
+}
+
 .carte__bloc--delice {
   background-color: #F9F9F9;
   font-family: "Caveat", Arial, Helvetica, sans-serif;
@@ -367,105 +436,6 @@ body footer {
   background: #229DF9;
 }
 
-.carte__bloc--palette {
-  background-color: #FDFFFD;
-  font-family: "Caveat", Arial, Helvetica, sans-serif;
-  color: #000;
-}
-.carte__bloc--palette h2 {
-  font-size: 2.5rem;
-}
-.carte__bloc--palette h4 {
-  font-weight: normal;
-  font-size: 1.5rem;
-}
-.carte__bloc--palette p {
-  font-size: 1.2rem;
-}
-.carte__bloc--palette h2 {
-  background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
-}
-.carte__bloc--palette .before, .carte__bloc--palette .after {
-  clip-path: polygon(48% 44%, 75% 50%, 100% 48%, 100% 52%, 80% 55%, 49% 52%, 24% 58%, 0 55%, 0 45%, 21% 50%);
-  background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
-}
-
-.menu__bloc p, .menu__bloc h4, .menu__bloc .fa-music {
-  transition: all 200ms ease-in-out;
-}
-.menu__bloc:hover p, .menu__bloc:hover h4, .menu__bloc:hover .fa-music {
-  transform: scale(1.2);
-  opacity: 0.6;
-}
-
-@keyframes loader {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.btn:hover span {
-  animation: loader 500ms infinite;
-}
-.btn:hover span:nth-of-type(2) {
-  animation-delay: 150ms;
-}
-.btn:hover span:nth-of-type(3) {
-  animation-delay: 300ms;
-}
-
-@keyframes shake {
-  25% {
-    transform: translateX(2%);
-  }
-  75% {
-    transform: translateX(-2%);
-  }
-}
-footer h3:hover {
-  animation: shake 150ms 2;
-}
-
-.carte__bloc--note a {
-  background: linear-gradient(to top, #000 0%, #000 7%, transparent 7%) no-repeat;
-  background-size: 0 100%;
-  transition: background-size 250ms ease-in-out;
-}
-.carte__bloc--note a:hover {
-  background-size: 100% 100%;
-}
-
-.carte__bloc--chic a {
-  padding-bottom: 0.2rem;
-  transition: background-size 250ms ease-in-out;
-}
-.carte__bloc--chic .appetit {
-  background: linear-gradient(to top, #c77412 0%, #c77412 7%, transparent 7%) no-repeat;
-  background-size: 0 100%;
-}
-.carte__bloc--chic .appetit:hover {
-  background-size: 100% 100%;
-}
-.carte__bloc--chic .papilles {
-  background: linear-gradient(to top, #A56799 0%, #A56799 7%, transparent 7%) no-repeat;
-  background-size: 0 100%;
-}
-.carte__bloc--chic .papilles:hover {
-  background-size: 100% 100%;
-}
-.carte__bloc--chic .gourmandises {
-  background: linear-gradient(to top, #905bfd 0%, #905bfd 7%, transparent 7%) no-repeat;
-  background-size: 0 100%;
-}
-.carte__bloc--chic .gourmandises:hover {
-  background-size: 100% 100%;
-}
-
 .carte__bloc--delice a {
   padding-bottom: 0.2rem;
   transition: background-size 250ms ease-in-out;
@@ -490,6 +460,32 @@ footer h3:hover {
 }
 .carte__bloc--delice .terminer:hover {
   background-size: 100% 100%;
+}
+
+.carte__bloc--palette {
+  background-color: #FDFFFD;
+  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  color: #000;
+}
+.carte__bloc--palette h2 {
+  font-size: 2.5rem;
+}
+.carte__bloc--palette h4 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+.carte__bloc--palette p {
+  font-size: 1.2rem;
+}
+.carte__bloc--palette h2 {
+  background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+}
+.carte__bloc--palette .before, .carte__bloc--palette .after {
+  clip-path: polygon(48% 44%, 75% 50%, 100% 48%, 100% 52%, 80% 55%, 49% 52%, 24% 58%, 0 55%, 0 45%, 21% 50%);
+  background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
 }
 
 .carte__bloc--palette a {

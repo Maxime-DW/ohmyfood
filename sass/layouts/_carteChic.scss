@@ -1,0 +1,72 @@
+// LE CHIC A LA FRANCAISE
+
+.carte__bloc{
+    &--chic {
+        background-color: $color-bloc-chic;
+        font-family: $font-family-chic-menu;
+        h4 {
+            font-size: 1.1rem;
+        }
+        p {
+            font-size: .9rem;
+        }
+        h2 {
+           @include color-text-chic;
+           font-family: $font-family-chic;
+           font-size: 1.7rem;
+           margin-bottom: 3rem;
+        }
+        .before, .after {
+            clip-path: polygon(0 49%, 84% 40%, 100% 50%, 84% 60%);
+        }
+        .entree {
+            color: $color-text-chic-menu;
+            .before, .after {
+                background: #c77412;
+            }
+        }
+        .plat {
+            color: #A56799;
+            .before, .after {
+                background: #A56799;
+            }
+        }
+        .dessert {
+            color: #905bfd;
+            .before, .after {
+                background: #905bfd;
+            }
+        }
+    }
+}
+
+// ANIMATION
+
+.carte__bloc{
+    &--chic {
+        a {
+            padding-bottom: .2rem;
+            transition: background-size 250ms ease-in-out;
+        }
+        .appetit {
+            background: linear-gradient(to top, #c77412 0%, #c77412 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+        }.appetit:hover {
+            background-size: 100% 100%;
+        }
+        .papilles {
+            background: linear-gradient(to top, #A56799 0%, #A56799 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+        }
+        .papilles:hover {
+            background-size: 100% 100%;
+        }
+        .gourmandises {
+            background: linear-gradient(to top, #905bfd 0%, #905bfd 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+        }
+        .gourmandises:hover {
+            background-size: 100% 100%;
+        }
+    }
+}

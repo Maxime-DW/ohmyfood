@@ -1,0 +1,63 @@
+@mixin carte-note-delice-palette {
+    color: $color-text-carte-note-delice-palette;
+    h2 {
+        font-size: 2.5rem;
+    }
+    h4 {
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@mixin color-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin color-logo-note {
+    background: linear-gradient(270deg, rgba(241,88,97,0.2836484935771183) 36%, rgba(255,0,0,1) 79%);
+    @include color-text;
+}
+
+@mixin color-text-chic {
+    background: linear-gradient(90deg, #c77412 0%, #905bfd 100%);
+    @include color-text;
+}
+
+@mixin color-text-delice {
+    background: linear-gradient(90deg, #0645e5 0%, #1b91fa 100%);
+    @include color-text;
+}
+
+@mixin color-text-palette {
+    background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
+    @include color-text;
+}
+
+@mixin margin-text-menu {
+    margin: 1vh;
+}
+
+@mixin position-text-menu {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    padding: 2rem;
+}
+
+@mixin position-logo-note {
+    font-size: 2rem;
+}
+
+@mixin size-bloc-menu {
+    width: 70%;
+    height: 50vh;
+    box-shadow: 0 0 .5rem #AFAFAF;
+    margin: 0rem 1rem 3rem 1rem;
+}

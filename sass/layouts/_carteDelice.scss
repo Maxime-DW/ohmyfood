@@ -1,0 +1,62 @@
+// LE DELICE DES PAPILLES
+
+.carte__bloc{
+    &--delice {
+        background-color: $color-bloc-delice;
+        font-family: $font-family-note-delice-palette-menu;
+        @include carte-note-delice-palette;
+        h2 {
+            @include color-text-delice;
+            font-family: $font-family-delice;
+        }
+        .before, .after {
+            clip-path: polygon(8% 50%, 59% 50%, 96% 50%, 100% 55%, 5% 55%, 0 40%, 6% 49%);
+        }
+        .entree {
+            .before, .after {
+                background: #0228DD;
+            }
+        }
+        .plat {
+            .before, .after {
+                background: #0670F3;
+            }
+        }
+        .dessert {
+            .before, .after {
+                background: #229DF9;
+            }
+        }
+    }
+}
+
+// ANIMATION
+
+.carte__bloc{
+    &--delice {
+        a {
+            padding-bottom: .2rem;
+            transition: background-size 250ms ease-in-out;
+        }
+        .commencer {
+            background: linear-gradient(to top, #0228DD 0%, #0228DD 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+        }.commencer:hover {
+            background-size: 100% 100%;
+        }
+        .continuer {
+            background: linear-gradient(to top, #0670F3 0%, #0670F3 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+        }
+        .continuer:hover {
+            background-size: 100% 100%;
+        }
+        .terminer {
+            background: linear-gradient(to top, #229DF9 0%, #229DF9 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+        }
+        .terminer:hover {
+            background-size: 100% 100%;
+        }
+    }
+}

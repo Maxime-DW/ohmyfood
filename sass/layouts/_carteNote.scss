@@ -1,0 +1,60 @@
+// LA NOTE ENCHANTEE
+
+.carte__bloc{
+    &--note {
+        background-color: $color-bloc-note;
+        font-family: $font-family-note-delice-palette-menu;
+        @include carte-note-delice-palette;
+        .fa-music {
+            @include color-logo-note;
+        }
+        section {
+            p {
+                padding-left: 0;
+                strong {
+                    padding-right: 0;
+                }
+            }
+        }
+        h2, h3 {
+            font-family: $font-family-note;
+        }
+        h2 {
+            font-size: 2.5rem;
+            .fa-music {
+                font-size: 3.5rem;
+            }
+        }
+        h3 {
+            color: $color-text-note-menu;
+            .fa-music {
+                font-size: 2rem;
+                position: relative;
+                right: 1rem;
+            }
+        }
+        .before, .after {
+            clip-path: polygon(46% 45%, 89% 49%, 100% 47%, 100% 53%, 64% 52%, 36% 51%, 10% 55%, 0 53%, 0 47%, 11% 49%);
+            background-color: #000;
+        }
+        h4 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+}
+
+// ANIMATION
+
+.carte__bloc{
+    &--note {
+        a {
+            background: linear-gradient(to top, #000 0%, #000 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+            transition: background-size 250ms ease-in-out;
+        }
+        a:hover {
+            background-size: 100% 100%;
+        }
+    }
+}

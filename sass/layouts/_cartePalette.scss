@@ -1,0 +1,33 @@
+// LA PALETTE DU GOUT
+
+.carte__bloc{
+    &--palette {
+        background-color: $color-bloc-palette;
+        font-family: $font-family-note-delice-palette-menu;
+        @include carte-note-delice-palette;
+        h2 {
+            @include color-text-palette;
+            font-family: $font-family-palette;
+        }
+        .before, .after {
+            clip-path: polygon(48% 44%, 75% 50%, 100% 48%, 100% 52%, 80% 55%, 49% 52%, 24% 58%, 0 55%, 0 45%, 21% 50%);
+            background: linear-gradient(90deg, #4c9f42 0%, #bfff7e 100%);
+        }
+    }
+}
+
+// ANIMATION
+
+.carte__bloc{
+    &--palette {
+        a {
+            padding-bottom: .2rem;
+            background: linear-gradient(to top, #4c9f42 0%, #4c9f42 7%, transparent 7%) no-repeat;
+            background-size: 0 100%;
+            transition: background-size 250ms ease-in-out;
+        }
+        a:hover {
+            background-size: 100% 100%;
+        }
+    }
+}

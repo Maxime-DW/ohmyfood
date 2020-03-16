@@ -1,0 +1,100 @@
+// PAGE D'ACCUEIL
+
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__bloc {
+        @include size-bloc-menu;
+        &--note {
+            @include position-text-menu;
+            background-color: $color-bloc-note;
+            font-family: $font-family-note;
+            font-size: $size-text-menu;
+            p, h4 {
+                @include margin-text-menu;
+                color: $color-text-note-menu;
+            }
+            h4 {
+                text-transform: uppercase;
+                font-family: $font-family-note-delice-palette-menu;
+                font-size: 2rem;
+            }
+            .fa-music {
+                @include position-logo-note;
+                @include color-logo-note;
+            }
+        }
+        &--chic {
+            @include position-text-menu;
+            background-color: $color-bloc-chic;
+            font-family: $font-family-chic;
+            font-size: $size-text-menu;
+            h4 {
+                @include margin-text-menu;
+            }
+            p {
+                font-size: $size-text-menu-chic;
+                @include color-text-chic;
+            }
+            h4 {
+                font-family: $font-family-chic-menu;
+                color: $color-text-chic-menu;
+            }
+        }
+        &--delice {
+            @include position-text-menu;
+            background-color: $color-bloc-delice;
+            font-family: $font-family-delice;
+            font-size: $size-text-menu;
+            p, h4 {
+                @include margin-text-menu;
+            }
+            p {
+                @include color-text-delice;
+            }
+            h4 {
+                font-family: $font-family-note-delice-palette-menu;
+                color: $color-text-delice-menu;
+                font-size: 2rem;
+                font-weight: normal;
+            }
+        }
+        &--palette {
+            @include position-text-menu;
+            background-color: $color-bloc-palette;
+            font-family: $font-family-palette;
+            font-size: $size-text-menu;
+            p, h4 {
+                @include margin-text-menu;
+            }
+            p {
+                @include color-text-palette;
+            }
+            h4 {
+                font-family: $font-family-note-delice-palette-menu;
+                color: $color-text-palette-menu;
+                font-size: 2rem;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+// ANIMATION
+
+.menu__bloc {
+    p, h4, .fa-music {
+        transition: all 200ms ease-in-out;
+    }
+    &:hover {
+        p, h4, .fa-music {
+            transform: scale(1.2);
+            opacity: .6;
+        }
+    }
+}
+
+
